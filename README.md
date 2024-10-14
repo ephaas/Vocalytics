@@ -32,3 +32,7 @@ For more detailed information, refer to the [Backend README](backend/README.md).
 
 - **Frontend README**: Detailed documentation for the frontend can be found [here](frontend/README.md).
 - **Backend README**: Detailed documentation for the backend can be found [here](backend/README.md).
+
+##Disclaimer
+
+Orginal repository used during creation of project with team was: https://github.com/samkorostov/Vocalytics
