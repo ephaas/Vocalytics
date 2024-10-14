@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Transcription App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- UI controls at the top -->
+        <div class="ui-controls">
+            <div class="header">
+                <h1 id="title">Transcribe It!</h1>
+                <button id="darkModeButton">Dark Mode</button>
+            </div>
+
+            <p class="subtitle">Record your voice and see it turned into text instantly.</p>
+
+            <div class="controls">
+                <button id="start">🎤 Start Recording</button>
+                <button id="stop" disabled>🛑 Stop Recording</button>
+            </div>
+        </div>
+
+        <!-- Transcription box at the bottom -->
+        <div class="transcription-box">
+            <div id="textOutput">No transcription available</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Dark mode toggle using a button
+        const darkModeButton = document.getElementById('darkModeButton');
+        darkModeButton.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            darkModeButton.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+body.dark-mode .transcription-box {
+    background-color: #333;
+    color: white;
+}
+
+/* Container for the entire page */
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 12.7px; /* Half inch margin around the container */
+    justify-content: space-between; /* Space out elements */
+}
+
+/* UI controls at the top */
+.ui-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Adjust title and buttons higher */
+    align-items: center;
+    padding-top: 20px; /* Move the buttons higher */
+    position: relative; /* Relative positioning to position dark mode button */
+}
+
+/* Dark Mode Button in the top right */
+#darkModeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#darkModeButton:hover {
+    background-color: #357ABD;
+}
+
+body.dark-mode #darkModeButton {
+    background-color: #ff6347;
+}
+
+/* Title centered */
+#title {
+    font-size: 42px;
+    color: #4A90E2;
+    font-weight: 700;
+    text-align: center; /* Ensure the title is centered */
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Bottom half for the transcription box */
+.transcription-box {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9fafb;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Make the text inside the transcription box larger and centered */
+#textOutput {
+    font-size: 24px; /* Larger font size */
+    text-align: center;
+    color: #333; /* Default text color */
+}
+
+body.dark-mode #textOutput {
+    color: white; /* Ensure text is visible in dark mode */
+}
+
+/* Button styles */
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
